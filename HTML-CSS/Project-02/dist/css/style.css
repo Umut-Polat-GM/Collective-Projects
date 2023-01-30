@@ -85,6 +85,7 @@ a {
   width: 44%;
   border-radius: 0.3rem;
   border: transparent;
+  outline: none;
 }
 .search-box__btn {
   background-color: #0b5ed7;
@@ -188,7 +189,7 @@ a {
     width: 80%;
   }
 }
-article {
+.article {
   background: #fff;
 }
 
@@ -345,6 +346,7 @@ article {
   width: 100%;
   border-radius: 0.3rem;
   border: transparent;
+  outline: none;
 }
 .search-down__btn {
   background-color: #0b5ed7;

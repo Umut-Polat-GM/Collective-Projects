@@ -1,20 +1,21 @@
 .banner{
     background: $lightGreen;
-    padding: 4rem;
+    padding: 14rem 0 6rem 0;
     display: flex;
     text-align: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 2rem;
 
     &__img{
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
     }
 
     &__header{
         color: $clr-white;
-        padding: 1rem;
+        padding: 1.2rem;
         font-size: $font-xxlg;
         font-weight: bold;
     }
@@ -26,5 +27,22 @@
     &__text{
         color: $clr-white;
         margin-top: 2rem;
+        font-size: $font-lg;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .banner{
+        padding-top: 16rem;
+
+        &__header{
+            font-size: $font-xlg;
+        }
+
+        &__text{
+            color: $clr-white;
+            margin-top: 2rem;
+            font-size: $font-med;
+        }
     }
 }

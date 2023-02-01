@@ -32,7 +32,7 @@
   }
 
   &__btn {
-    width: 18%;
+    width: 25%;
     height: 8vh;
     margin: 2rem auto;
     background: transparent;
@@ -59,7 +59,7 @@
   }
 
   .about__btn {
-    width: 20%;
+    width: 40%;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -73,7 +73,7 @@
   }
 
   .about__btn {
-    width: 25%;
+    width: 45%;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -88,6 +88,19 @@
   }
 
   .about__btn {
-    width: 30%;
+    width: 55%;
+  }
+}
+@media only screen and (max-width: 538px) {
+
+  .about__btn {
+    width: 62%;
+  }
+}
+@media only screen and (max-width: 378px) {
+  
+
+  .about__btn {
+    width: 75%;
   }
 }

@@ -1,13 +1,18 @@
 .header {
   background: $darkBlue;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
 
   .nav {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 2.2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: padding 0.4s;
 
     &__logo {
       color: $clr-white;
@@ -17,7 +22,7 @@
 
     &__list {
       color: $clr-white;
-      font-size: $font-sm;
+      font-size: $font-med;
       display: flex;
 
       &__item {
@@ -39,15 +44,12 @@
 
 @media only screen and (max-width: 992px) {
   .header {
-
     .nav {
       width: 90%;
 
       &__list {
-
         &__item {
           margin: 0 1rem;
-
         }
       }
     }
@@ -56,12 +58,10 @@
 
 @media only screen and (max-width: 768px) {
   .header {
-
     .nav {
       width: 95%;
 
       &__list {
-        
         &__item {
           margin: 0 1rem;
         }
@@ -71,28 +71,33 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .header {
-      
-        .nav {
-            
-          flex-direction: column;
-      
-          &__list {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-      
-            &__item {
-              margin: 1rem 0;
-              transition: $transition;
-      
-              &:hover {
-                transform: scale(1.45);
-                font-weight: bold;
-              }
-            }
+  .header {
+    position: absolute;
+
+    .nav {
+      flex-direction: column;
+      padding: 1.2rem 0;
+
+      &__logo {
+        font-size: 1.6rem;
+        text-align: center;
+      }
+
+      &__list {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        &__item {
+          margin: 1rem 0;
+          transition: $transition;
+
+          &:hover {
+            transform: scale(1.45);
+            font-weight: bold;
           }
         }
       }
+    }
+  }
 }
-

@@ -10,8 +10,8 @@
     <title>Portfolio Page</title>
   </head>
   <body>
-    <header class="header">
-      <div class="nav">
+    <header id="header" class="header">
+      <div id="navbar" class="nav">
         <div class="nav__logo">START BOOTSTRAP</div>
         <ul class="nav__list">
           <li class="nav__list__item"><a href="#">PORTFOLIO</a></li>
@@ -38,13 +38,31 @@
             <div class="portfolio__icon__star"><i class="fa-solid fa-star fa-2x"></i></div>
             <div class="portfolio__icon__line"></div>
       </div>
-      <div class="portfolio__content">
-        <div class="portfolio__content__img"><img src="dist/img/coding.svg" alt="coding"></div>
-        <div class="portfolio__content__img"><img src="dist/img/gym-time.svg" alt="gmy"></div>
-        <div class="portfolio__content__img"><img src="dist/img/installing.svg" alt="installing"></div>
-        <div class="portfolio__content__img"><img src="dist/img/macbook.svg" alt="mackbook"></div>
-        <div class="portfolio__content__img"><img src="dist/img/open-vault.svg" alt="vault"></div>
-        <div class="portfolio__content__img"><img src="dist/img/designer-tool-war.svg" alt="designer"></div>
+      <div class="portfolio__container">
+        <div class="portfolio__item">
+          <div class="item_hover"><i class="fa-solid fa-plus"></i></div>
+          <img src="dist/img/coding.svg" alt="coding">
+        </div>
+        <div class="portfolio__item">
+          <div class="item_hover"><i class="fa-solid fa-plus"></i></div>
+          <img src="dist/img/gym-time.svg" alt="gmy">
+        </div>
+        <div class="portfolio__item">
+          <div class="item_hover"><i class="fa-solid fa-plus"></i></div>
+          <img src="dist/img/installing.svg" alt="installing">
+        </div>
+        <div class="portfolio__item">
+          <div class="item_hover"><i class="fa-solid fa-plus"></i></div>
+          <img src="dist/img/macbook.svg" alt="mackbook">
+        </div>
+        <div class="portfolio__item">
+          <div class="item_hover"><i class="fa-solid fa-plus"></i></div>
+          <img src="dist/img/open-vault.svg" alt="vault">
+        </div>
+        <div class="portfolio__item">
+          <div class="item_hover"><i class="fa-solid fa-plus"></i></div>
+          <img src="dist/img/designer-tool-war.svg" alt="designer">
+        </div>
       </div>
     </div>
     </section>
@@ -69,16 +87,51 @@
         <div class="contact__icon__line"></div>
       </div>
       <form class="contact__form">
-        <label class="contact__form__label" for="name">Full name</label>
-        <input class="contact__form__input" type="text" id="name">
-        <label class="contact__form__label" for="address">Email address</label>
-        <input class="contact__form__input" type="text" id="address">
-        <label class="contact__form__label" for="number">Phone number</label>
-        <input class="contact__form__input" type="text" id="number">
-        <label class="contact__form__label" for="message">Message</label>
-        <textarea class="contact__form__textarea" type="text" id="message" cols="40" rows="10"></textarea>
+        <div class="contact__form__container">
+          <input class="contact__form__container__input" type="text" id="name">
+          <label class="contact__form__container__label" for="name">Full name</label>
+        </div>
+        <div class="contact__form__container">
+          <input class="contact__form__container__input" type="text" id="address">
+          <label class="contact__form__container__label" for="address">Email address</label>
+        </div>
+        <div class="contact__form__container">
+          <input class="contact__form__container__input" type="text" id="number">
+          <label class="contact__form__container__label" for="number">Phone number</label>
+        </div>
+        <div class="contact__form__container">
+          <textarea class="contact__form__container__textarea" type="text" id="message" cols="40" rows="10"></textarea>
+          <label class="contact__form__container__label" for="message">Message</label>
+        </div>
         <button class="contact__form__btn" type="submit">Send</button>
       </form>
     </section>
+    <section class="information">
+      <div class="information__location">
+        <div class="information__location__title">LOCATION</div>
+        <div class="information__location__address">2215 John Daniel Drive Clark, MO 65243</div>
+      </div>
+      <div class="information__socialMedia">
+        <div class="information__socialMedia__title">AROUND THE WEB</div>
+        <div class="information__socialMedia__icons">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
+          <i class="fa-solid fa-basketball"></i>
+        </div>
+      </div>
+      <div class="information__hiring">
+        <div class="information__hiring__title">ABOUT FREELANCER</div>
+        <div class="information__hiring__text">
+          Freelance is a free to use, MIT licensed Bootstrap theme created by.
+          <a href="#">Start Bootstrap</a>.
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      Copyright © Your Website 2022
+    </footer>
+
+    <script src="dist/js/script.js"></script>
   </body>
 </html>

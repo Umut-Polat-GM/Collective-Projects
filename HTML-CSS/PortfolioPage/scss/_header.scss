@@ -8,7 +8,7 @@
   .nav {
     width: 90%;
     margin: 0 auto;
-    padding: 2.2rem;
+    padding: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,9 +24,13 @@
       color: $clr-white;
       font-size: $font-med;
       display: flex;
+      gap: 1.5rem;
 
       &__item {
-        margin: 0 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1.2rem;
         transition: $transition;
 
         a {
@@ -34,10 +38,25 @@
         }
 
         &:hover {
-          transform: scale(1.25);
+          transform: scale(1.1);
           font-weight: bold;
         }
       }
+    }
+
+    .hamburger {
+      display: none;
+      cursor: pointer;
+    }
+
+    .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      background-color: white;
     }
   }
 }
@@ -45,7 +64,7 @@
 @media only screen and (max-width: 992px) {
   .header {
     .nav {
-      width: 90%;
+      width: 95%;
 
       &__list {
         &__item {
@@ -61,42 +80,44 @@
     .nav {
       width: 95%;
 
-      &__list {
-        &__item {
-          margin: 0 1rem;
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .header {
-    position: absolute;
-
-    .nav {
-      flex-direction: column;
-      padding: 1.2rem 0;
-
-      &__logo {
-        font-size: 1.6rem;
-        text-align: center;
+      .hamburger {
+        display: block;
       }
 
-      &__list {
-        display: flex;
+      .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+
+      .nav__list {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        gap: 0;
         flex-direction: column;
-        text-align: center;
+        background-color: $darkBlue;
+        width: 100%;
+        transition: 0.3s;
+        height: 0;
 
         &__item {
-          margin: 1rem 0;
-          transition: $transition;
-
-          &:hover {
-            transform: scale(1.45);
-            font-weight: bold;
-          }
+          margin: 16px 0;
+          display: none;
         }
+      }
+
+      .nav__list.active {
+        height: 180px;
+        left: 0;
+        padding-left: 3rem;
+      }
+      .nav__list.active .nav__list__item {
+        display: block;
       }
     }
   }

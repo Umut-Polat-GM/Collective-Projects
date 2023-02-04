@@ -44,7 +44,7 @@ a {
 .header .nav {
   width: 90%;
   margin: 0 auto;
-  padding: 2.2rem;
+  padding: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -59,22 +59,38 @@ a {
   color: #fff;
   font-size: 1.125rem;
   display: flex;
+  gap: 1.5rem;
 }
 .header .nav__list__item {
-  margin: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.2rem;
   transition: all 0.3s linear;
 }
 .header .nav__list__item a {
   color: #fff;
 }
 .header .nav__list__item:hover {
-  transform: scale(1.25);
+  transform: scale(1.1);
   font-weight: bold;
+}
+.header .nav .hamburger {
+  display: none;
+  cursor: pointer;
+}
+.header .nav .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
 }
 
 @media only screen and (max-width: 992px) {
   .header .nav {
-    width: 90%;
+    width: 95%;
   }
   .header .nav__list__item {
     margin: 0 1rem;
@@ -84,34 +100,40 @@ a {
   .header .nav {
     width: 95%;
   }
-  .header .nav__list__item {
-    margin: 0 1rem;
+  .header .nav .hamburger {
+    display: block;
   }
-}
-@media only screen and (max-width: 600px) {
-  .header {
-    position: absolute;
+  .header .nav .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
   }
-  .header .nav {
+  .header .nav .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .header .nav .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .header .nav .nav__list {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    gap: 0;
     flex-direction: column;
-    padding: 1.2rem 0;
+    background-color: #2C3E50;
+    width: 100%;
+    transition: 0.3s;
+    height: 0;
   }
-  .header .nav__logo {
-    font-size: 1.6rem;
-    text-align: center;
+  .header .nav .nav__list__item {
+    margin: 16px 0;
+    display: none;
   }
-  .header .nav__list {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+  .header .nav .nav__list.active {
+    height: 180px;
+    left: 0;
+    padding-left: 3rem;
   }
-  .header .nav__list__item {
-    margin: 1rem 0;
-    transition: all 0.3s linear;
-  }
-  .header .nav__list__item:hover {
-    transform: scale(1.45);
-    font-weight: bold;
+  .header .nav .nav__list.active .nav__list__item {
+    display: block;
   }
 }
 .banner {
@@ -574,4 +596,16 @@ a {
   background: rgba(0, 0, 0, 0.9);
   color: #fff;
   font-size: 0.8rem;
+}
+
+.activeBg {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: #1ABC9C;
+  border-radius: 0.4rem;
+  height: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */

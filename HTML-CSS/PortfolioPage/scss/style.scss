@@ -7,3 +7,14 @@
 @import "contact";
 @import "information";
 @import "footer";
+
+
+.activeBg{
+    width: max-content;
+    background-color: $lightGreen;
+    border-radius: 0.4rem;
+    height: 2.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
